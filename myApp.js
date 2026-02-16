@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 
+/*
+Information Security 
+all code additions below this comment
+author: Austin Zickur
+*/
 
 
 
@@ -43,8 +48,11 @@ const app = express();
 
 
 
-
-
+/*
+Information Security 
+all code additions above this comment
+author: Austin Zickur
+*/
 
 
 module.exports = app;
