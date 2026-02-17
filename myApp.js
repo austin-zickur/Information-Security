@@ -8,7 +8,7 @@ author: Austin Zickur
 */
 const helmet = require('helmet');
 
-
+app.use(helmet.hidePoweredBy());
 
 
 
