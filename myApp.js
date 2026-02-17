@@ -21,7 +21,7 @@ app.use(helmet.ieNoOpen()); //block html autodownload
 const ninetyDaysInSeconds = 90*24*60*60
 app.use(helmet.hsts({maxAge:ninetyDaysInSeconds, force: true})); //https 90 day limit
 
-
+app.use(helmet.dnsPrefetchControl());
 
 
 
