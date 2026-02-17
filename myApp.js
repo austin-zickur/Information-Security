@@ -6,17 +6,17 @@ Information Security
 all code additions below this comment
 author: Austin Zickur
 */
-const helmet = require('helmet');
+const helmet = require('helmet'); //load and cache modules
 
-app.use(helmet.hidePoweredBy());
+app.use(helmet.hidePoweredBy()); //remove x-powered-by header
 
-app.use(helmet.frameguard({action:'DENY'}));
+app.use(helmet.frameguard({action:'DENY'})); //deny clickjacking via framing
 
-app.use(helmet.xssFilter());
+app.use(helmet.xssFilter()); //sanitize server queries
 
-app.use(helmet.noSniff());
+app.use(helmet.noSniff()); //lock content-type
 
-
+app.use(helmet.ieNoOpen()); //block html autodownload
 
 
 
