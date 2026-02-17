@@ -25,7 +25,7 @@ app.use(helmet.dnsPrefetchControl()); //control dns prefetching
 
 app.use(helmet.noCache()); //disable client caching
 
-
+app.use(helmet.contentSecurityPolicy({directives:{defaultSrc:["'self'"], scriptSrc:["'self'","trusted-cdn.com"]}})) //configure allowed sources
 
 
 
