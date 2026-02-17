@@ -12,7 +12,7 @@ app.use(helmet.hidePoweredBy());
 
 app.use(helmet.frameguard({action:'DENY'}));
 
-
+app.use(helmet.xssFilter());
 
 
 
