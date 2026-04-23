@@ -10,6 +10,19 @@ const runner            = require('./test-runner');
 
 const app = express();
 
+/*Security Measures
+Author: Austin Zickur
+Boilerplate: freeCodeCamp InfoSec*/
+const helmet = require('helmet');
+app.use(helmet.contentSecurityPolicy({
+  directives:{
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'"],
+    styleSrc: ["'self'"]
+  }
+}));
+/*END*/
+
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.use(cors({origin: '*'})); //For FCC testing purposes only
